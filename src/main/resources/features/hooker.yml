@@ -1,0 +1,10 @@
+ENABLED: true
+PORT: 4025 #The ports of the hubs must be different in each hub
+DEBUG: false #Ignore this
+VARIABLES: #The port of the variables can be the same in all modes
+  HCF:
+    HOST: 0.0.0.0
+    PORT: 4024
+  KITMAP:
+    HOST: 0.0.0.0
+    PORT: 4024

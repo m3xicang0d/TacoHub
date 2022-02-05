@@ -1,0 +1,42 @@
+COSMETICS:
+  TITLE: "&7Cosmetics"
+  ROWS: 3
+  REFILL-GLASS:
+    ENABLED: true
+    DATA: 7
+  HAT:
+    ENABLED: true
+    NAME: "&6&lHats"
+    ITEM: "DIAMOND_HELMET"
+    DATA: 0
+    SLOT: 11
+    LORE:
+      - ""
+      - "&7A lot of different hat"
+      - "&7that can be place on you."
+      - ""
+      - "&6Click to browse hat!"
+  PARTICLES:
+    ENABLED: true
+    NAME: "&6&lParticles"
+    ITEM: "DIAMOND_HELMET"
+    DATA: 0
+    SLOT: 12
+    LORE:
+      - ""
+      - "&7A lot of different particle"
+      - "&7that can be place on you."
+      - ""
+      - "&6Click to browse particles!"
+  ARMOR:
+    ENABLED: true
+    NAME: "&6Armor Outfits"
+    ITEM: "LEATHER_CHESTPLATE"
+    DATA: 0
+    SLOT: 13
+    LORE:
+      - ""
+      - "&7A lot of different colorful armor"
+      - "&7that can be place on you."
+      - ""
+      - "&6Click to browse armor!"

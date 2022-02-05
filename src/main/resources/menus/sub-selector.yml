@@ -1,0 +1,87 @@
+SUB-SELECTOR:
+  TITLE: "%server% subselector"
+  ROWS: 3
+  BACK_BUTTON:
+    ENABLED: true
+    NAME: "&cBack"
+    ITEM: "REDSTONE"
+    DATA: 0
+    LORE:
+      - "&cClick here to return to back menu!"
+  REFILL-GLASS:
+    ENABLED: true
+    DATA: 15
+  HCF:
+    SQUADS:
+      NAME: "&a&lSquads"
+      ITEM: "DIAMOND_SWORD"
+      DATA: 0
+      SLOT: 11
+      LORE:
+        - "&ePlayers: &f%bungee_Squads%/500"
+        - " "
+        - "&7* &615 Man Factions!"
+        - "&7* &6No Allies!"
+        - "&7* &6KOTHs, Conquest, & Citadel!"
+        - " "
+        - "&7» &eClick to join the queue! &7«"
+      SERVER: "Squads"
+      COMMAND:
+        ENABLED: false
+        COMMAND: ""
+
+    TEAMS:
+      NAME: "&a&lTeams"
+      ITEM: "DIAMOND_SWORD"
+      DATA: 0
+      SLOT: 12
+      LORE:
+        - "&ePlayers: &f%bungee_Teams%/500"
+        - " "
+        - "&7* &615 Man Factions!"
+        - "&7* &6No Allies!"
+        - "&7* &6KOTHs, Conquest, & Citadel!"
+        - " "
+        - "&7» &eClick to join the queue! &7«"
+      SERVER: "Teams"
+      COMMAND:
+        ENABLED: false
+        COMMAND: ""
+
+
+  PRACTICE:
+    PRACTICE-NA:
+      NAME: "&a&lPractice-NA"
+      ITEM: "POTION"
+      DATA: 0
+      SLOT: 12
+      LORE:
+        - "&ePlayers: &f%bungee_Teams%/500"
+        - " "
+        - "&7* &615 Man Factions!"
+        - "&7* &6No Allies!"
+        - "&7* &6KOTHs, Conquest, & Citadel!"
+        - " "
+        - "&7» &eClick to join the queue! &7«"
+      SERVER: "Teams"
+      COMMAND:
+        ENABLED: false
+        COMMAND: ""
+
+    PRACTICE-SA:
+      NAME: "&a&lPractice-SA"
+      ITEM: "POTION"
+      DATA: 0
+      SLOT: 13
+      LORE:
+        - "&ePlayers: &f%bungee_Teams%/500"
+        - " "
+        - "&7* &615 Man Factions!"
+        - "&7* &6No Allies!"
+        - "&7* &6KOTHs, Conquest, & Citadel!"
+        - " "
+        - "&7» &eClick to join the queue! &7«"
+      SERVER: "Teams"
+      COMMAND:
+        ENABLED: false
+        COMMAND: ""

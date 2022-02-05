@@ -1,0 +1,16 @@
+name: TacoHub
+version: 1.5.7
+main: me.jesusmx.tacohub.TacoHub
+authors:
+  - Rui
+softdepend:
+  - Vault
+  - ProtocolLib
+  - Protocol Support
+  - ViaVersion
+  - PlaceholderAPI
+  - Hestia
+  - Mizu
+  - AquaCore
+  - Zoom
+  - Zoot

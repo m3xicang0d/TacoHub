@@ -1,0 +1,120 @@
+MENU:
+  TITLE: "&7Hats Selector"
+  ROWS: 4
+  REFILL-GLASS:
+    ENABLED: true
+    DATA: 7
+  REMOVE_HAT:
+    SLOT: 35
+    NAME: "&cClick to remove hat"
+    ITEM: "BEACON"
+    DATA: 0
+    LORE:
+      - ""
+  HATS:
+    ######################
+    #  MINECRAFT BLOCKS  #
+    ######################
+    Beacon:
+      SLOT: 10
+      NAME: "&6&lBeacon Head"
+      ITEM: "BEACON"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 0
+      SKULL:
+        ENABLED: false
+        OWNER: "" #Only if skull is true
+    Note-Blocks:
+      SLOT: 11
+      NAME: "&6&lNOTE_BLOCK Head"
+      ITEM: "NOTE_BLOCK"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 0
+      SKULL:
+        ENABLED: false
+        OWNER: "" #Only if skull is true
+    Redstone-Block:
+      SLOT: 12
+      NAME: "&6&lRedstone-BLock Head"
+      ITEM: "REDSTONE_BLOCK"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 0
+      SKULL:
+        ENABLED: false
+        OWNER: "" #Only if skull is true
+    Dispenser:
+      SLOT: 13
+      NAME: "&6&lDispenser Head"
+      ITEM: "DISPENSER"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 0
+      SKULL:
+        ENABLED: false
+        OWNER: "" #Only if skull is true
+    #####################
+    # MINECRAFT PLAYERS #
+    #####################
+    PatroxWarez:
+      SLOT: 19
+      NAME: "&6&lPatroxWarez Head"
+      ITEM: "SKULL_ITEM"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 3
+      SKULL:
+        ENABLED: true
+        OWNER: "PatroxWarez" #Only if skull is true
+    MeeZoid:
+      SLOT: 20
+      NAME: "&6&lMeeZoid Head"
+      ITEM: "SKULL_ITEM"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 3
+      SKULL:
+        ENABLED: true
+        OWNER: "MeeZoid" #Only if skull is true
+    JesusMX:
+      SLOT: 21
+      NAME: "&6&lJesusMX Head"
+      ITEM: "SKULL_ITEM"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 3
+      SKULL:
+        ENABLED: true
+        OWNER: "Tewels" #Only if skull is true
+    NotRamix:
+      SLOT: 22
+      NAME: "&6&lNotRamix Head"
+      ITEM: "SKULL_ITEM"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 3
+      SKULL:
+        ENABLED: true
+        OWNER: "NotRamix" #Only if skull is true
+    Spyno:
+      SLOT: 23
+      NAME: "&6&lSpyno Head"
+      ITEM: "SKULL_ITEM"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 3
+      SKULL:
+        ENABLED: true
+        OWNER: "Spyno" #Only if skull is true
+    Verzide:
+      SLOT: 24
+      NAME: "&6&lVerzide Head"
+      ITEM: "SKULL_ITEM"
+      LORE:
+        - "&7Right click to select your &6hat"
+      DATA: 3
+      SKULL:
+        ENABLED: true
+        OWNER: "Verzide" #Only if skull is true

@@ -1,0 +1,80 @@
+SCOREBOARD:
+  ENABLED: true
+  TITLE:
+    NORMAL: "%TITLE%"
+    ANIMATION:
+      ENABLED: true
+      ANIMATED:
+        - "&6&lTacoHub &7⎜ &fHub-01"
+        - "&8&lTacoHub &7⎜ &fHub-01"
+        - "&6&lTacoHub &7⎜ &fHub-01"
+        - "&8&lTacoHub &7⎜ &fHub-01"
+      INTERVAL: 1 #in seconds
+
+  FOOTER:
+    ANIMATION:
+      ENABLED: true
+      ANIMATED:
+        - "&6suxior.live"
+        - "&8suxior.live"
+        - "&6suxior.live"
+        - "&8suxior.live"
+      INTERVAL: 1 #in seconds
+    
+  NORMAL:
+    - "&7&m--------------------"
+    - "&6&lOnline"
+    - "%online%"
+    - ""
+    - "&6&lRank"
+    - "%rank%"
+    - ""
+    - "&6&lQueue"
+    - "&cNot in queue"
+    - ""
+    - "%FOOTER%"
+    - "&7&m--------------------"
+  QUEUED:
+    - "&7&m--------------------"
+    - "&6&lOnline"
+    - "%online%"
+    - ""
+    - "&6&lRank"
+    - "%rank%"
+    - ""
+    - "&6&lQueue"
+    - "&b%server%"
+    - "&cPosition: %position% of %size%"
+    - ""
+    - "%FOOTER%"
+    - "&7&m--------------------"
+  PARKOUR:
+    - "&7&m--------------------"
+    - "&7you are currently"
+    - "&7in &6Parkour mode"
+    - ""
+    - "&bPing: %player_ping%"
+    - "&bDuration: %duration%"
+    - ""
+    - "&c&lIF YOU FALL"
+    - "&c&lYOU LOSE THE GAME!"
+    - ""
+    - "%FOOTER%"
+    - "&7&m--------------------"
+  PARKOUR-QUEUE:
+    - "&7&m--------------------"
+    - "&7you are currently"
+    - "&7in &6Parkour mode"
+    - ""
+    - "&bPing: %player_ping%"
+    - "&bDuration: %duration%"
+    - ""
+    - "&c&lIF YOU FALL"
+    - "&c&lYOU LOSE THE GAME!"
+    - ""
+    - "&6Queued Information"
+    - "&fServer&7: &6%server%"
+    - "&fPosition&7: &6%position% of %size%"
+    - ""
+    - "%FOOTER%"
+    - "&7&m--------------------"

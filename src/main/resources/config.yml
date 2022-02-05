@@ -1,0 +1,114 @@
+LICENSE-KEY: ""
+RANK-SUPPORT: Vault # CORE-RANKS AVAILABLE: Vault, AquaCore, Mizu, Hestia, Zoom
+QUEUE-SUPPORT: "" #QUEUE'S: EZQUEUE, PORTAL, CUSTOM
+
+CHAT-FORMAT:
+  NORMAL:
+    ENABLED: true
+    MESSAGE: "%prefix%%player%&7: &r%message%" #variable %lunar%
+    PREFIX-LUNAR: "&9&l[L&b&lC]&r" #Variable %lunar% , this only works if LunarClient-API is on the server
+  MUTED:
+    ENABLED: false # Permission to bypass: hubcore.chat-bypass
+    MESSAGE: "&cThe chat is disabled for the moment."
+
+RESTRICTED-HUB:
+  ENABLED: false
+  BUNGEE-NAME: "Hub-Restricted" # Permission: hubcore.restricted
+
+JOIN-MESSAGE:
+  ENABLED: true
+  LINES:
+    - "&7&m-------------------------------------------"
+    - "&7Welcome to &6&lMexican Development"
+    - ""
+    - "&6Your Rank: &r%rank%"
+    - ""
+    - "&7» &6Twitter&7: &ftwitter.com/servercom"
+    - "&7» &6TeamSpeak&7: &fts.server.com"
+    - "&7» &6Discord&7: &fdiscord.gg/mexicandev"
+    - "&7» &6Website&7: &fwww.server.com"
+    - ""
+    - "&7&oUse the compass to navigate the servers"
+    - "&7&m-------------------------------------------"
+
+QUEUE_SERVERS:
+  - "Practice"
+  - "Kitmap"
+  - "HCF"
+QUEUE_MESSAGES:
+  INQUEUE:
+    - ""
+    - "&7You are &d%position% &7in the &d%server%"
+    - ""
+  HIGHER_QUEUE: "&eSomeone with higher queue priority has joined the queue!"
+  LEAVE_QUEUE: "&7You are no longer in queue for &b%server%&7."
+  PAUSED: "&b%server% &7queue has been &cpaused"
+  UNPAUSED: "&b%server% &7queue has been &aunpaused"
+
+EXIT-ANNOUNCE:
+  ENABLED: false
+  MESSAGE: "&7[&c-&7] %prefix%%player% &ehas left to the server."
+
+JOIN-ANNOUNCE:
+  ENABLED: false
+  MESSAGE: "&7[&a+&7] %prefix%%player% &ehas join to the server."
+
+JOIN-SOUND:
+  ENABLE: true
+  SOUND: "CAT_MEOW"
+
+JOIN-SPEED:
+  ENABLE: true
+  MULTIPLIER: 0.5
+
+DOUBLE-JUMP:
+  ENABLE: true
+  SOUND: "BAT_TAKEOFF"
+  EFFECT: "FLAME"
+  VELOCITY: 2
+
+LAUNCH_PAD:
+  ENABLED: true
+  MATERIAL: STONE_PLATE
+  SOUND: EXPLODE
+
+WORLD:
+  VOID-TELEPORT: true
+  BUILDER-MODE: true
+  DISABLE-MOBS-SPAWN: true
+  NO-BREAK-BLOCKS: true
+  NO-PLACE-BLOCKS: true
+  BORDER:
+    ENABLED: true
+    MAX-X: 300
+    MAX-Z: 300
+    MESSAGE: "&cYou have reached the limit of the map"
+  MINEHQ-HIDEPLAYERS:
+    MESSAGE: "&bPop!"
+    SOUND: "BLAZE_HIT"
+
+PROTECTION:
+  ENABLED: true
+  BLOCKED-COMMANDS:
+    - "about"
+    - "bukkit:about"
+    - "bukkit:help"
+    - "bukkit:?"
+    - "bukkit:me"
+    - "bukkit:pl"
+    - "bukkit:plugins"
+    - "bukkit:ver"
+    - "bukkit:version"
+    - "icanhasbukkit"
+    - "info"
+    - "?"
+    - "pl"
+    - "plugins"
+    - "ver"
+    - "version"
+    - "me"
+    - "say"
+  MESSAGE: "&cI'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error."
+
+SPAWN:
+  SET: false

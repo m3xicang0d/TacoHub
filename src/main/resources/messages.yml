@@ -1,0 +1,44 @@
+MESSAGES:
+  DISCORD-COMMAND:
+    ENABLED: true
+    MESSAGE:
+      - "&fDiscord&7: &6discord.gg/tacohub"
+  STORE-COMMAND:
+    ENABLED: true
+    MESSAGE:
+      - "&fStore&7: &6store.server.com"
+  TEAMSPEAK-COMMAND:
+    ENABLED: true
+    MESSAGE:
+      - "&fTeamspeak&7: &6ts.server.com"
+  TWITTER-COMMAND:
+    ENABLED: true
+    MESSAGE:
+      - "&fTwitter&7: &6twitter.com/tacohub"
+  WEBSITE-COMMAND:
+    ENABLED: true
+    MESSAGE:
+      - "&fWebsite&7: &6www.server.com"
+  HELP-COMMAND:
+    ENABLED: true
+    MESSAGE:
+      - "&7&m----------------------------------------"
+      - "&6For instant assistance join our teamspeak!"
+      - ""
+      - "&eTeamspeak&7: &fts.server.com"
+      - "&eTwitter&7: &fwww.twitter.com/servercom"
+      - "&eStore&7: &fstore.server.com"
+      - "&eWebsite&7: &fbwww.server.com"
+      - "&eDiscord&7: &fdiscord.server.com"
+      - "&eCheck out the rules at: www.server.com/rules"
+      - ""
+      - "&7&m----------------------------------------"
+
+BUILDER-MODE:
+  ENABLED: "&eBuilder mode: has been &aenabled"
+  DISABLED: "&eBuilder mode: has been &cdisabled"
+
+HATS:
+  EQUIPPED: "&cYou have equipped the head of &r%HAT_ITEM%"
+  UNEQUIPED: "&cYou have removed your head by &r%HAT_ITEM%"
+  NO-PERMISSION: "&cYou dont have permissions to use hats"

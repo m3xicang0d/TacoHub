@@ -1,0 +1,87 @@
+SERVER-SELECTOR:
+  ENABLED: true
+  NAME: "&9» &e&lServer Selector &9«"
+  MATERIAL: WATCH
+  DATA: 0
+  SLOT: 0
+  LORE:
+    - "&7Right click to navigate servers"
+
+HUB-SELECTOR:
+  ENABLED: true
+  NAME: "&9» &8&lHub Selector &9«"
+  MATERIAL: NETHER_STAR
+  DATA: 0
+  SLOT: 1
+  LORE:
+    - "&7Right click to navigate hub's"
+
+COSMETICS:
+  ENABLED: true
+  NAME: "&9» &2&lCosmetics &9«"
+  MATERIAL: ENDER_CHEST
+  DATA: 0
+  SLOT: 2
+  LORE:
+    - "&7Right click to navigate cosmetics"
+
+PARKOUR:
+  ENABLED: true
+  NAME: "&9» &d&lParkour &9«"
+  MATERIAL: FEATHER
+  DATA: 0
+  SLOT: 3
+  LORE:
+    - "&7Right click to play parkour"
+  PARKOUR:
+    X: 0
+    Y: 100
+    Z: 0
+    WORLD: "world"
+    BLOCK: "STONE"
+  SPAWN:
+    X: 0
+    Y: 100
+    Z: 0
+    WORLD: "world"
+
+ENDERBUTT:
+  ENABLED: true
+  RIDE-ENABLED: false
+  NAME: "&9» &5&lEnderButt &9«"
+  MATERIAL: ENDER_PEARL #Only work with ENDER_PEARL or #SNOW_BALL
+  AMOUNT: 1
+  DATA: 0
+  SOUND: "ORB_PICKUP"
+  SLOT: 4
+  LORE:
+    - "&7click to use ender butt"
+
+ROCKET:
+  ENABLED: true
+  NAME: "&9» &6&lRocket &9«"
+  ITEM: "FIREWORK"
+  SOUND: "FIREWORK_LARGE_BLAST2"
+  EFFECT: "FLAME"
+  MULTIPLY: 0.0 # 0.0 is default
+  SLOT: 5
+  LORE:
+    - "&7click to use rocket"
+
+PLAYER_HIDER:
+  ENABLED: true
+  SLOT: 6
+  HIDED:
+    MATERIAL: INK_SACK
+    ID: 10
+    NAME: "&9» &a&lShow Players &9«"
+    LORE:
+      - "&7Show all players"
+    MESSAGE: "&cPlayers are hidden for you!"
+  SHOWN:
+    MATERIAL: INK_SACK
+    ID: 8
+    NAME: "&9» &7&lHide Players &9«"
+    LORE:
+      - "&7Hide all players"
+    MESSAGE: "&aPlayers are visible for you!"

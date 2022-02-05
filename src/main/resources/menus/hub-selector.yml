@@ -1,0 +1,28 @@
+HUB-SELECTOR:
+  TITLE: "&7Selet a hub selector..."
+  ROWS: 1
+  REFILL-GLASS:
+    ENABLED: true
+    DATA: 15
+  ITEMS:
+    HUB-01:
+      NAME: "&6&lHub-01"
+      ITEM: "NETHER_STAR"
+      DATA: 0
+      SLOT: 0
+      LORE:
+        - ""
+        - "&aClick to join Hub-01"
+        - ""
+      SERVER: "Hub-01"
+
+    HUB-02:
+      NAME: "&6&lHub-02"
+      ITEM: "NETHER_STAR"
+      DATA: 0
+      SLOT: 1
+      LORE:
+        - ""
+        - "&aClick to join Hub-02"
+        - ""
+      SERVER: "Hub-02"

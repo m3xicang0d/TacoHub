@@ -1,0 +1,66 @@
+SERVER-SELECTOR:
+  TITLE: "&7Select a server to join..."
+  ROWS: 3
+  REFILL-GLASS:
+    ENABLED: true
+    DATA: 15
+  HEAD-MENU:
+    ENABLED: false #IN DATA USE: 3
+  ITEMS:
+    HCF:
+      NAME: "&a&lHCF"
+      ITEM: "DIAMOND_SWORD"
+      DATA: 0
+      HEAD: "JesusMX"
+      SLOT: 11
+      LORE:
+        - "&ePlayers: &f%bungee_Squads%/500"
+        - " "
+        - "&7* &615 Man Factions!"
+        - "&7* &6No Allies!"
+        - "&7* &6KOTHs, Conquest, & Citadel!"
+        - " "
+        - "&7» &eClick to join the queue! &7«"
+      SUB-SERVER: false
+      SERVER: "HCF"
+      COMMAND:
+        ENABLED: false
+        COMMAND: ""
+
+    KITMAP:
+      NAME: "&a&lKitmap"
+      ITEM: "IRON_SWORD"
+      DATA: 0
+      SLOT: 13
+      LORE:
+        - "&ePlayers: &f%bungee_Kitmap%/500"
+        - " "
+        - "&7* &65 minute KOTHs!"
+        - "&7* &624/7 PvP!"
+        - "&7* &6Obstacles, Skybridges, & More!"
+        - " "
+        - "&7» &eClick to join the queue! &7«"
+      SUB-SERVER: false
+      SERVER: "Kitmap"
+      COMMAND:
+        ENABLED: false
+        COMMAND: ""
+
+    PRACTICE:
+      NAME: "&a&lPractice"
+      ITEM: "BOW"
+      DATA: 0
+      SLOT: 15
+      LORE:
+        - "&ePlayers: &f%bungee_Practice%/500"
+        - " "
+        - "&7* &61v1s, 2v2s, 3v3s!"
+        - "&7* &6Leaderboards, Parties, & Queues!"
+        - "&7* &6Tournaments, Redrovers, & More!"
+        - " "
+        - "&7» &eClick to join the queue! &7«"
+      SUB-SERVER: true
+      SERVER: "Practice"
+      COMMAND:
+        ENABLED: false
+        COMMAND: ""
