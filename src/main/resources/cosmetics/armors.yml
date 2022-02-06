@@ -1,0 +1,6 @@
+MENU:
+  TITLE: ""
+  ROWS: 4
+  REFILL-GLASS:
+    ENABLED: true
+    DATA: 7

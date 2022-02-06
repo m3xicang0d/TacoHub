@@ -1,6 +1,6 @@
-package me.jesusmx.tacohub.cosmetics.types.hat.button;
+package me.jesusmx.tacohub.cosmetics.button.hat;
 
-import me.jesusmx.tacohub.cosmetics.types.hat.menu.HatMenu;
+import me.jesusmx.tacohub.cosmetics.menu.hat.HatsMenu;
 import me.jesusmx.tacohub.utils.bukkit.ItemBuilder;
 import me.jesusmx.tacohub.utils.bukkit.menu.Button;
 import me.jesusmx.tacohub.utils.files.features.CosmeticsFile;
@@ -21,7 +21,7 @@ public class HatMenuButton extends Button {
 
     @Override
     public void click(Player player, int slot, ClickType clickType, int hotbarButton) {
-        new HatMenu().openMenu(player);
+        new HatsMenu().openMenu(player);
     }
 
     @Override

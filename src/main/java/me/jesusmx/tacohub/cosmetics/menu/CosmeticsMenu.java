@@ -1,6 +1,6 @@
-package me.jesusmx.tacohub.cosmetics.impl;
+package me.jesusmx.tacohub.cosmetics.menu;
 
-import me.jesusmx.tacohub.cosmetics.types.hat.button.HatMenuButton;
+import me.jesusmx.tacohub.cosmetics.button.hat.HatMenuButton;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.ItemBuilder;
 import me.jesusmx.tacohub.utils.bukkit.menu.Button;

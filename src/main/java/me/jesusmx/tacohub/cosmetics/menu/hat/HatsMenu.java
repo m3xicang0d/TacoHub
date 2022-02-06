@@ -1,7 +1,7 @@
-package me.jesusmx.tacohub.cosmetics.types.hat.menu;
+package me.jesusmx.tacohub.cosmetics.menu.hat;
 
-import me.jesusmx.tacohub.cosmetics.types.hat.button.HatButton;
-import me.jesusmx.tacohub.cosmetics.types.hat.button.HatRemoveButton;
+import me.jesusmx.tacohub.cosmetics.button.hat.HatButton;
+import me.jesusmx.tacohub.cosmetics.button.hat.HatRemoveButton;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.ItemBuilder;
 import me.jesusmx.tacohub.utils.bukkit.menu.Button;
@@ -20,7 +20,7 @@ import java.util.Map;
  * @Project TacoHub
  **/
 
-public class HatMenu extends Menu {
+public class HatsMenu extends Menu {
 
     private final FileConfiguration config = HatsFile.getConfig();
 

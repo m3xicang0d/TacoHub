@@ -2,7 +2,7 @@ package me.jesusmx.tacohub.listerners;
 
 import me.jesusmx.tacohub.TacoHub;
 import me.jesusmx.tacohub.commands.impl.Permissions;
-import me.jesusmx.tacohub.cosmetics.impl.item.CosmeticsItem;
+import me.jesusmx.tacohub.cosmetics.item.CosmeticsItem;
 import me.jesusmx.tacohub.listerners.enderbutt.item.EnderButtItem;
 import me.jesusmx.tacohub.parkour.item.ParkourItem;
 import me.jesusmx.tacohub.listerners.rocket.RocketItem;

@@ -1,4 +1,4 @@
-package me.jesusmx.tacohub.cosmetics.types.hat.button;
+package me.jesusmx.tacohub.cosmetics.button.hat;
 
 import lombok.AllArgsConstructor;
 import me.jesusmx.tacohub.TacoHub;
