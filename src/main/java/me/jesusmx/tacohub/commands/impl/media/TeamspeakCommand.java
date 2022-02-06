@@ -1,0 +1,18 @@
+package me.jesusmx.tacohub.commands.impl.media;
+
+
+import me.jesusmx.tacohub.utils.CC;
+import me.jesusmx.tacohub.utils.bukkit.command.Command;
+import me.jesusmx.tacohub.utils.files.normal.MessagesFile;
+import org.bukkit.command.CommandSender;
+
+public class TeamspeakCommand extends Command {
+
+    @Override
+    public boolean execute(CommandSender sender, String label, String[] args) {
+        if (MessagesFile.getConfig().getBoolean("MESSAGES.TEAMSPEAK-COMMAND.ENABLED")) {
+            MessagesFile.getConfig().getStringList("MESSAGES.TEAMSPEAK-COMMAND.MESSAGE").stream().map(CC::translate).forEach(sender::sendMessage);
+        }
+        return true;
+    }
+}
