@@ -1,10 +1,10 @@
 package me.jesusmx.tacohub.cosmetics.menu.armor;
 
+import me.jesusmx.tacohub.cosmetics.button.armor.ArmorButton;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.menu.Button;
 import me.jesusmx.tacohub.utils.bukkit.menu.Menu;
 import me.jesusmx.tacohub.utils.files.cosmetics.ArmorsFile;
-import me.jesusmx.tacohub.utils.files.features.CosmeticsFile;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
@@ -33,7 +33,9 @@ public class ArmorsMenu extends Menu {
     @Override
     public Map<Integer, Button> getButtons(Player player) {
         Map<Integer, Button> buttons = new HashMap<>();
-
+        for(String s : config.getConfigurationSection("MENU.ARMORS").getKeys(false)) {
+            buttons.put(config.getInt("MENU.ARMORS." + s + ".SLOT") - 1, new ArmorButton(s));
+        }
         return buttons;
     }
 }

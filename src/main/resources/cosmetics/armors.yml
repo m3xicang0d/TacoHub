@@ -4,3 +4,30 @@ MENU:
   REFILL-GLASS:
     ENABLED: true
     DATA: 7
+
+  ARMORS:
+    BLUE:
+      PERMISSION: "HUB.ARMORS.BLUE"
+      SLOT: 1
+      ICON:
+        COLOR:
+          R: 0
+          G: 0
+          B: 255
+        NAME: "Blue Armor"
+        LORE:
+          WITH_PERMISSIONS:
+            - "&7Right click to equip"
+          WITHOUT_PERMISSIONS:
+            - "&cYou no have permissions to use this!"
+      COLOR:
+        R: 0
+        G: 0
+        B: 255
+      HELMET:
+        R: 255
+        G: 0
+        B: 0
+        NAME: "&1Helmet blue"
+        LORE:
+          - "This is a description"

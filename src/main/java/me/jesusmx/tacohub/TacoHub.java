@@ -33,6 +33,7 @@ import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.command.PluginCommand;
 import me.jesusmx.tacohub.utils.bukkit.license.TacoLicense;
 import me.jesusmx.tacohub.utils.bungee.BungeeUtils;
+import me.jesusmx.tacohub.utils.files.cosmetics.ArmorsFile;
 import me.jesusmx.tacohub.utils.files.cosmetics.HatsFile;
 import me.jesusmx.tacohub.utils.files.cosmetics.ParticlesFile;
 import me.jesusmx.tacohub.utils.files.features.*;
@@ -113,7 +114,7 @@ public class TacoHub extends JavaPlugin {
     }
 
     private void files() {
-        configFiles = Arrays.asList(ConfigFile.getConfig(), HookerFile.getConfig(), HotbarFile.getConfig(), HubSelectorFile.getConfig(), MessagesFile.getConfig(), ScoreboardFile.getConfig(), ServerSelectorFile.getConfig(), TablistFile.getConfig(), CosmeticsFile.getConfig(), HatsFile.getConfig(), SubSelectorFile.getConfig(), ParticlesFile.getConfig());
+        configFiles = Arrays.asList(ConfigFile.getConfig(), HookerFile.getConfig(), HotbarFile.getConfig(), HubSelectorFile.getConfig(), MessagesFile.getConfig(), ScoreboardFile.getConfig(), ServerSelectorFile.getConfig(), TablistFile.getConfig(), CosmeticsFile.getConfig(), HatsFile.getConfig(), SubSelectorFile.getConfig(), ParticlesFile.getConfig(), ArmorsFile.getConfig());
     }
 
     private void commands() {

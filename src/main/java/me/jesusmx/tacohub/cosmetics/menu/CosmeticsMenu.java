@@ -1,5 +1,6 @@
 package me.jesusmx.tacohub.cosmetics.menu;
 
+import me.jesusmx.tacohub.cosmetics.button.armor.ArmorMenuButton;
 import me.jesusmx.tacohub.cosmetics.button.hat.HatMenuButton;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.ItemBuilder;
@@ -32,6 +33,7 @@ public class CosmeticsMenu extends Menu {
     public Map<Integer, Button> getButtons(Player player) {
         Map<Integer, Button> buttons = new HashMap<>();
         buttons.put(config.getInt("COSMETICS.HAT.SLOT"), new HatMenuButton());
+        buttons.put(config.getInt("COSMETICS.ARMOR.SLOT"), new ArmorMenuButton());
         return buttons;
     }
 
