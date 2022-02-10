@@ -1,5 +1,6 @@
 package io.github.fxmxgragfx.api.cf;
 
+import lombok.experimental.UtilityClass;
 import me.jesusmx.tacohub.TacoHub;
 
 import java.io.File;
@@ -11,6 +12,7 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+@UtilityClass
 public class ClassFinder {
 
     public static  <T> Set<Class<? extends T>> findAll(Class<? extends T> type) {

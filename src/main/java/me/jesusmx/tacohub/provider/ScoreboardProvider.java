@@ -3,6 +3,9 @@ package me.jesusmx.tacohub.provider;
 import io.github.thatkawaiisam.assemble.AssembleAdapter;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.jesusmx.tacohub.TacoHub;
+import me.jesusmx.tacohub.customtimer.CharProcessor;
+import me.jesusmx.tacohub.customtimer.command.CustomTimer;
+import me.jesusmx.tacohub.customtimer.command.CustomTimerCache;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bungee.BungeeUtils;
 import me.jesusmx.tacohub.utils.files.features.ScoreboardFile;
@@ -94,8 +97,22 @@ public class ScoreboardProvider implements AssembleAdapter {
             String title = titles();
             toReturn = toReturn.stream().map(s -> s.replace("%TITLE%", title)).collect(Collectors.toList());
         }
+
+        /*Custom Timers Section*/
+        if(!CustomTimerCache.getActiveCustomTimers().isEmpty()) {
+            for (CustomTimer timer : CustomTimerCache.getActiveCustomTimers()) {
+                //Max size is 16
+                if(!CustomTimerCache.getChars().containsKey(timer)) {
+                    CustomTimerCache.getChars().put(timer, new CharProcessor(timer, 16, 250));
+                }
+                CharProcessor processor = CustomTimerCache.getChars().get(timer);
+                processor.update();
+                toReturn.add(processor.getFinalTextt());
+            }
+        }
         return toReturn;
     }
+
 
     private String footer() {
         List<String> footers = CC.translate(config.getStringList("SCOREBOARD.FOOTER.ANIMATION.ANIMATED"));

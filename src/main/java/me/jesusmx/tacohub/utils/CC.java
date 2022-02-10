@@ -1,10 +1,12 @@
 package me.jesusmx.tacohub.utils;
 
+import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@UtilityClass
 public class CC {
 
     public static String NO_CONSOLE = CC.translate("&cNo Console!");
@@ -33,9 +35,6 @@ public class CC {
     public static final String MENU_BAR;
     public static final String CHAT_BAR;
     public static final String SB_BAR;
-
-    public CC() {
-    }
 
     public static String translate(String input) {
         return ChatColor.translateAlternateColorCodes('&', input);

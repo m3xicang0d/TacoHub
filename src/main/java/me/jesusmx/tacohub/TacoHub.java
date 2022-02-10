@@ -22,6 +22,9 @@ import me.jesusmx.tacohub.commands.impl.queue.LeaveQueueCommand;
 import me.jesusmx.tacohub.commands.impl.queue.ToggleQueueCommand;
 import me.jesusmx.tacohub.commands.impl.spawn.SetSpawnCommand;
 import me.jesusmx.tacohub.commands.impl.staff.SkullCommand;
+import me.jesusmx.tacohub.cosmetics.command.CosmeticsCommand;
+import me.jesusmx.tacohub.customtimer.command.CustomTimerCache;
+import me.jesusmx.tacohub.customtimer.command.CustomTimerCommand;
 import me.jesusmx.tacohub.hooker.Hooker;
 import me.jesusmx.tacohub.permissions.PermissionCore;
 import me.jesusmx.tacohub.permissions.type.*;
@@ -96,7 +99,7 @@ public class TacoHub extends JavaPlugin {
 
         this.permissions();
         Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&6TacoHub&8] &aThe rank system " + this.permissions() + " &aHas been loaded successfully"));
-
+        new CustomTimerCache();
     }
 
 
@@ -134,6 +137,12 @@ public class TacoHub extends JavaPlugin {
         new PluginCommand("leavequeue", LeaveQueueCommand.class);
         new PluginCommand("togglequeue", ToggleQueueCommand.class,"pausequeue");
         new PluginCommand("joinqueue", JoinQueueCommand.class, "play");
+
+        // Cosmetics Commands //
+        new PluginCommand("cosmetics", CosmeticsCommand.class);
+
+        // CustomTimer Commands //
+        new PluginCommand("customtimer", CustomTimerCommand.class, "timers", "customtimers", "timer");
     }
 
     private void managers() {
@@ -152,7 +161,7 @@ public class TacoHub extends JavaPlugin {
     private void scoreboard() {
         if (ScoreboardFile.getConfig().getBoolean("SCOREBOARD.ENABLED")) {
             Assemble assemble = new Assemble(this, new ScoreboardProvider());
-            assemble.setTicks(2);
+            assemble.setTicks(200);
             assemble.setAssembleStyle(AssembleStyle.CUSTOM.descending(true).startNumber(16));
         }
     }

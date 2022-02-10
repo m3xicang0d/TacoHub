@@ -19,7 +19,7 @@ public class TacoHubCommand extends Command {
 
     @Override
     public boolean execute(CommandSender sender, String label, String[] args) {
-        if (sender.hasPermission("hubcore.reload"))
+        if (!sender.hasPermission("hubcore.reload")) return false;
         if (args.length == 0) {
             sender.sendMessage(CC.translate("&7&m-------------------------------------------"));
             sender.sendMessage(CC.translate("&6&lTacoHub &7- &fMexican Development"));
@@ -41,7 +41,7 @@ public class TacoHubCommand extends Command {
                         Method method = clazz.getDeclaredMethod("reload");
                         method.setAccessible(true);
                         method.invoke(c);
-                        sender.sendMessage(CC.translate("&aSuccessfully saved the file " + c.getClass().getSimpleName().replace("File", "").toLowerCase(Locale.ROOT) + ".yml"));
+                        sender.sendMessage(CC.translate("&aSuccessfully reloaded the file " + c.getClass().getSimpleName().replace("File", "").toLowerCase(Locale.ROOT) + ".yml"));
                     } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException ignored) {}
                 });
                 sender.sendMessage(CC.translate("&aSuccessfully all TacoHub Files reloaded!"));

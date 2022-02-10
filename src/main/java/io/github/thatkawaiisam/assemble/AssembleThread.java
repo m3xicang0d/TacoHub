@@ -27,7 +27,7 @@ public class AssembleThread extends Thread {
         while(true) {
             try {
                 tick();
-                sleep(assemble.getTicks() * 50);
+                sleep(assemble.getTicks());
             } catch (Exception e) {
                 e.printStackTrace();
             }

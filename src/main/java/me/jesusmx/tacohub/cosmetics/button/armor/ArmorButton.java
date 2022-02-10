@@ -1,7 +1,6 @@
 package me.jesusmx.tacohub.cosmetics.button.armor;
 
 import io.github.fxmxgragfx.api.item.ArmorBuilder;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.ItemBuilder;
@@ -70,18 +69,11 @@ public class ArmorButton extends Button {
         ItemStack stack = builder.build();
         LeatherArmorMeta meta = (LeatherArmorMeta) stack.getItemMeta();
         meta.setColor(Color.fromBGR(
-                config.getInt(path + "ICON.B"),
-                config.getInt(path + "ICON.G"),
-                config.getInt(path + "ICON.R")
+                config.getInt(path + "ICON.COLOR.B"),
+                config.getInt(path + "ICON.COLOR.G"),
+                config.getInt(path + "ICON.COLOR.R")
         ));
         stack.setItemMeta(meta);
         return stack;
-    }
-
-    private boolean isPresent(String iPath) {
-        String s = path + "." + iPath + ".";
-        return config.getString(s + "R") != null &&
-                config.getString(s + "G") != null &&
-                config.getString(s + "B") != null;
     }
 }
