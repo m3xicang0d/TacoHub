@@ -23,13 +23,12 @@ import me.jesusmx.tacohub.commands.impl.queue.ToggleQueueCommand;
 import me.jesusmx.tacohub.commands.impl.spawn.SetSpawnCommand;
 import me.jesusmx.tacohub.commands.impl.staff.SkullCommand;
 import me.jesusmx.tacohub.cosmetics.command.CosmeticsCommand;
-import me.jesusmx.tacohub.customtimer.command.CustomTimerCache;
-import me.jesusmx.tacohub.customtimer.command.CustomTimerCommand;
 import me.jesusmx.tacohub.hooker.Hooker;
 import me.jesusmx.tacohub.permissions.PermissionCore;
 import me.jesusmx.tacohub.permissions.type.*;
 import me.jesusmx.tacohub.provider.ScoreboardProvider;
 import me.jesusmx.tacohub.provider.TablistProvider;
+import me.jesusmx.tacohub.pvpmode.command.PvPModeCommand;
 import me.jesusmx.tacohub.queue.QueueManager;
 import me.jesusmx.tacohub.queue.custom.QueueHandler;
 import me.jesusmx.tacohub.utils.CC;
@@ -99,7 +98,7 @@ public class TacoHub extends JavaPlugin {
 
         this.permissions();
         Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&6TacoHub&8] &aThe rank system " + this.permissions() + " &aHas been loaded successfully"));
-        new CustomTimerCache();
+        //new CustomTimerCache();
     }
 
 
@@ -141,8 +140,11 @@ public class TacoHub extends JavaPlugin {
         // Cosmetics Commands //
         new PluginCommand("cosmetics", CosmeticsCommand.class);
 
+        // PvPMode //
+        new PluginCommand("pvpmode", PvPModeCommand.class, "pvp");
+
         // CustomTimer Commands //
-        new PluginCommand("customtimer", CustomTimerCommand.class, "timers", "customtimers", "timer");
+        //new PluginCommand("customtimer", CustomTimerCommand.class, "timers", "customtimers", "timer");
     }
 
     private void managers() {

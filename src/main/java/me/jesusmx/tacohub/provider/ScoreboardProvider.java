@@ -3,15 +3,12 @@ package me.jesusmx.tacohub.provider;
 import io.github.thatkawaiisam.assemble.AssembleAdapter;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.jesusmx.tacohub.TacoHub;
-import me.jesusmx.tacohub.customtimer.CharProcessor;
-import me.jesusmx.tacohub.customtimer.command.CustomTimer;
-import me.jesusmx.tacohub.customtimer.command.CustomTimerCache;
+import me.jesusmx.tacohub.pvpmode.cache.PvPModeHandler;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bungee.BungeeUtils;
 import me.jesusmx.tacohub.utils.files.features.ScoreboardFile;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.bukkit.scoreboard.Score;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -68,6 +65,17 @@ public class ScoreboardProvider implements AssembleAdapter {
                         .map(line -> line.replace("%size%", String.valueOf(TacoHub.getInstance().getQueueManager().getInQueue(TacoHub.getInstance().getQueueManager().getQueueIn(player)))))
                         .collect(Collectors.toList());
             }
+        } else if(PvPModeHandler.isOnPvPMode(player)) {
+            toReturn = ScoreboardFile.getConfig().getStringList("SCOREBOARD.PVP-MODE")
+                    .stream()
+                    .map(line -> PlaceholderAPI.setPlaceholders(player, line))
+                    .map(line -> line.replace("%rank%", TacoHub.getInstance().getPermissionCore().getRank(player)))
+                    .map(line -> line.replace("%rankcolor%", TacoHub.getInstance().getPermissionCore().getRankColor(player)))
+                    .map(line -> line.replace("%server%", String.valueOf(TacoHub.getInstance().getQueueManager().getQueueIn(player))))
+                    .map(line -> line.replace("%position%", String.valueOf(TacoHub.getInstance().getQueueManager().getPosition(player))))
+                    .map(line -> line.replace("%online%", String.valueOf(BungeeUtils.getGlobalPlayers())))
+                    .map(line -> line.replace("%size%", String.valueOf(TacoHub.getInstance().getQueueManager().getInQueue(TacoHub.getInstance().getQueueManager().getQueueIn(player)))))
+                    .collect(Collectors.toList());
         } else {
             if (player.hasMetadata("PARKOUR")) {
                 toReturn = config.getStringList("SCOREBOARD.PARKOUR")
@@ -98,7 +106,7 @@ public class ScoreboardProvider implements AssembleAdapter {
             toReturn = toReturn.stream().map(s -> s.replace("%TITLE%", title)).collect(Collectors.toList());
         }
 
-        /*Custom Timers Section*/
+       /* *//*Custom Timers Section*//*
         if(!CustomTimerCache.getActiveCustomTimers().isEmpty()) {
             for (CustomTimer timer : CustomTimerCache.getActiveCustomTimers()) {
                 //Max size is 16
@@ -109,7 +117,7 @@ public class ScoreboardProvider implements AssembleAdapter {
                 processor.update();
                 toReturn.add(processor.getFinalTextt());
             }
-        }
+        }*/
         return toReturn;
     }
 
