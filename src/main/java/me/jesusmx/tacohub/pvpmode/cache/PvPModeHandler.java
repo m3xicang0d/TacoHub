@@ -7,6 +7,7 @@ import me.jesusmx.tacohub.listerners.rocket.RocketItem;
 import me.jesusmx.tacohub.listerners.toggleview.item.ShowedItem;
 import me.jesusmx.tacohub.parkour.item.ParkourItem;
 import me.jesusmx.tacohub.pvpmode.config.PvPModeFile;
+import me.jesusmx.tacohub.pvpmode.item.PvPModeItem;
 import me.jesusmx.tacohub.selector.hub.item.HubSelectorItem;
 import me.jesusmx.tacohub.selector.server.item.ServerSelectorItem;
 import me.jesusmx.tacohub.utils.CC;
@@ -57,6 +58,7 @@ public class PvPModeHandler {
             inPvPMode.remove(player.getUniqueId());
             kills.remove(player.getUniqueId());
             FileConfiguration config = HotbarFile.getConfig();
+            player.getInventory().clear();
             // Server selector item
             if(config.getBoolean("SERVER-SELECTOR.ENABLED")) {
                 new ServerSelectorItem().set(player, config.getInt("SERVER-SELECTOR.SLOT"));
@@ -84,6 +86,10 @@ public class PvPModeHandler {
             // Cosmetics Item
             if (config.getBoolean("COSMETICS.ENABLED")) {
                 new CosmeticsItem().set(player, config.getInt("COSMETICS.SLOT"));
+            }
+
+            if (config.getBoolean("PVP_MODE")) {
+                new PvPModeItem().set(player, config.getInt("PVP_MODE.SLOT"));
             }
             player.updateInventory();
             player.sendMessage("Successfully toggled pvpmode");
