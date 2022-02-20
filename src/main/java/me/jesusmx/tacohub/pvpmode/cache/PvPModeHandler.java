@@ -91,6 +91,11 @@ public class PvPModeHandler {
             if (config.getBoolean("PVP_MODE")) {
                 new PvPModeItem().set(player, config.getInt("PVP_MODE.SLOT"));
             }
+            if (ConfigFile.getConfig().getBoolean("JOIN-SPEED.ENABLE")) {
+                player.setWalkSpeed((float) ConfigFile.getConfig().getDouble("JOIN-SPEED.MULTIPLIER"));
+            } else {
+                player.setWalkSpeed(0.2F);
+            }
             player.updateInventory();
             player.sendMessage("Successfully toggled pvpmode");
             FileConfiguration c = ConfigFile.getConfig();
@@ -110,6 +115,7 @@ public class PvPModeHandler {
         } else {
             inPvPMode.put(player.getUniqueId(), System.currentTimeMillis());
             kills.put(player.getUniqueId(), 0);
+            player.setWalkSpeed(0.2F);
             player.getInventory().setContents(contents);
             player.getInventory().setArmorContents(armor);
             player.updateInventory();

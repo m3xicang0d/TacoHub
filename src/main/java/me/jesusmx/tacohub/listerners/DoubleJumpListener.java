@@ -1,5 +1,6 @@
 package me.jesusmx.tacohub.listerners;
 
+import me.jesusmx.tacohub.pvpmode.cache.PvPModeHandler;
 import me.jesusmx.tacohub.utils.files.normal.ConfigFile;
 import io.github.fxmxgragfx.api.listener.PluginListener;
 import org.bukkit.Effect;
@@ -25,6 +26,7 @@ public class DoubleJumpListener implements Listener {
     public void onPlayerJump(PlayerToggleFlightEvent event) {
         Player player = event.getPlayer();
         if(player.getGameMode() == GameMode.CREATIVE) return;
+        if(PvPModeHandler.isOnPvPMode(player)) return;
         if (ConfigFile.getConfig().getBoolean("DOUBLE-JUMP.ENABLED"))
             if (player.getGameMode() == GameMode.CREATIVE) {
                 return;
