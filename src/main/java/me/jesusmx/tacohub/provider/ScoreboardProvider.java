@@ -11,6 +11,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -65,17 +66,6 @@ public class ScoreboardProvider implements AssembleAdapter {
                         .map(line -> line.replace("%size%", String.valueOf(TacoHub.getInstance().getQueueManager().getInQueue(TacoHub.getInstance().getQueueManager().getQueueIn(player)))))
                         .collect(Collectors.toList());
             }
-        } else if(PvPModeHandler.isOnPvPMode(player)) {
-            toReturn = ScoreboardFile.getConfig().getStringList("SCOREBOARD.PVP-MODE")
-                    .stream()
-                    .map(line -> PlaceholderAPI.setPlaceholders(player, line))
-                    .map(line -> line.replace("%rank%", TacoHub.getInstance().getPermissionCore().getRank(player)))
-                    .map(line -> line.replace("%rankcolor%", TacoHub.getInstance().getPermissionCore().getRankColor(player)))
-                    .map(line -> line.replace("%server%", String.valueOf(TacoHub.getInstance().getQueueManager().getQueueIn(player))))
-                    .map(line -> line.replace("%position%", String.valueOf(TacoHub.getInstance().getQueueManager().getPosition(player))))
-                    .map(line -> line.replace("%online%", String.valueOf(BungeeUtils.getGlobalPlayers())))
-                    .map(line -> line.replace("%size%", String.valueOf(TacoHub.getInstance().getQueueManager().getInQueue(TacoHub.getInstance().getQueueManager().getQueueIn(player)))))
-                    .collect(Collectors.toList());
         } else {
             if (player.hasMetadata("PARKOUR")) {
                 toReturn = config.getStringList("SCOREBOARD.PARKOUR")
@@ -97,9 +87,23 @@ public class ScoreboardProvider implements AssembleAdapter {
                         .collect(Collectors.toList());
             }
         }
+        if(PvPModeHandler.isOnPvPMode(player)) {
+            toReturn = ScoreboardFile.getConfig().getStringList("SCOREBOARD.PVP-MODE")
+                    .stream()
+                    .map(line -> PlaceholderAPI.setPlaceholders(player, line))
+                    .map(line -> line.replace("%rank%", TacoHub.getInstance().getPermissionCore().getRank(player)))
+                    .map(line -> line.replace("%rankcolor%", TacoHub.getInstance().getPermissionCore().getRankColor(player)))
+                    .map(line -> line.replace("%server%", String.valueOf(TacoHub.getInstance().getQueueManager().getQueueIn(player))))
+                    .map(line -> line.replace("%position%", String.valueOf(TacoHub.getInstance().getQueueManager().getPosition(player))))
+                    .map(line -> line.replace("%online%", String.valueOf(BungeeUtils.getGlobalPlayers())))
+                    .map(line -> line.replace("%kills%", String.valueOf(PvPModeHandler.getKills().getOrDefault(player.getUniqueId(), 0))))
+                    .map(line -> line.replace("%duration%", String.valueOf(TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis() - PvPModeHandler.getTime(player)))))
+                    .map(line -> line.replace("%size%", String.valueOf(TacoHub.getInstance().getQueueManager().getInQueue(TacoHub.getInstance().getQueueManager().getQueueIn(player)))))
+                    .collect(Collectors.toList());
+        }
         if(config.getBoolean("SCOREBOARD.FOOTER.ANIMATION.ENABLED")) {
             String footer = footer();
-            toReturn = toReturn.stream().map(s -> s.replace("%FOOTER%", footer)).collect(Collectors.toList());
+            toReturn = toReturn.stream().map(s -> s.replace("%footer%", footer)).collect(Collectors.toList());
         }
         if(config.getBoolean("SCOREBOARD.TITLE.ANIMATION.ENABLED")) {
             String title = titles();

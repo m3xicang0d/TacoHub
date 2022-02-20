@@ -20,7 +20,7 @@ SCOREBOARD:
         - "&6suxior.live"
         - "&8suxior.live"
       INTERVAL: 1 #in seconds
-    
+
   NORMAL:
     - "&7&m--------------------"
     - "&6&lOnline"
@@ -80,4 +80,12 @@ SCOREBOARD:
     - "&7&m--------------------"
   PVP-MODE:
     - "&7&m--------------------"
+    - "&6Your Statistics"
+    - "&fKills&7: &6%kills%"
+    - "&fDuration&7: &6%duration%"
+    - ""
+    - "&cto leave pvp-mode"
+    - "&cuse /pvpmode"
+    - ""
+    - "%FOOTER%"
     - "&7&m--------------------"

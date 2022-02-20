@@ -68,6 +68,15 @@ ROCKET:
   LORE:
     - "&7click to use rocket"
 
+PVP_MODE:
+  ENABLED: true
+  NAME: "&9» &e&lPvPMode &9«"
+  MATERIAL: "DIAMOND_SWORD"
+  DATA: 0
+  SLOT: 7
+  LORE:
+    - "&7click to toggle the pvpmode"
+
 PLAYER_HIDER:
   ENABLED: true
   SLOT: 6

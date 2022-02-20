@@ -28,7 +28,9 @@ import me.jesusmx.tacohub.permissions.PermissionCore;
 import me.jesusmx.tacohub.permissions.type.*;
 import me.jesusmx.tacohub.provider.ScoreboardProvider;
 import me.jesusmx.tacohub.provider.TablistProvider;
+import me.jesusmx.tacohub.pvpmode.cache.PvPModeHandler;
 import me.jesusmx.tacohub.pvpmode.command.PvPModeCommand;
+import me.jesusmx.tacohub.pvpmode.config.PvPModeFile;
 import me.jesusmx.tacohub.queue.QueueManager;
 import me.jesusmx.tacohub.queue.custom.QueueHandler;
 import me.jesusmx.tacohub.utils.CC;
@@ -83,6 +85,7 @@ public class TacoHub extends JavaPlugin {
         }
         this.bungee();
         this.files();
+        new PvPModeHandler();
         Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&6TacoHub&8] &aThe files have been loaded correctly"));
         new ListenersHandler().registerAll();
         new ItemHandler().registerAll();
@@ -116,7 +119,7 @@ public class TacoHub extends JavaPlugin {
     }
 
     private void files() {
-        configFiles = Arrays.asList(ConfigFile.getConfig(), HookerFile.getConfig(), HotbarFile.getConfig(), HubSelectorFile.getConfig(), MessagesFile.getConfig(), ScoreboardFile.getConfig(), ServerSelectorFile.getConfig(), TablistFile.getConfig(), CosmeticsFile.getConfig(), HatsFile.getConfig(), SubSelectorFile.getConfig(), ParticlesFile.getConfig(), ArmorsFile.getConfig());
+        configFiles = Arrays.asList(ConfigFile.getConfig(), HookerFile.getConfig(), HotbarFile.getConfig(), HubSelectorFile.getConfig(), MessagesFile.getConfig(), ScoreboardFile.getConfig(), ServerSelectorFile.getConfig(), TablistFile.getConfig(), CosmeticsFile.getConfig(), HatsFile.getConfig(), SubSelectorFile.getConfig(), ParticlesFile.getConfig(), ArmorsFile.getConfig(), PvPModeFile.getConfig());
     }
 
     private void commands() {
