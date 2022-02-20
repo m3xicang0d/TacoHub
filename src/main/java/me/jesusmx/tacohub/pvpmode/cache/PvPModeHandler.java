@@ -47,12 +47,12 @@ public class PvPModeHandler {
     }
 
     public static void togglePvPMode(Player player) {
-        ItemStack[] contents = ((List<ItemStack>)PvPModeFile.getConfig().get("INVENTORY")).stream().toArray(ItemStack[]::new) ;
-        ItemStack[] armor = ((List<ItemStack>)PvPModeFile.getConfig().get("ARMOR")).stream().toArray(ItemStack[]::new) ;
-        if(contents == null || armor == null) {
+        if(PvPModeFile.getConfig().get("INVENTORY") == null || PvPModeFile.getConfig().get("ARMOR") == null) {
             player.sendMessage(CC.RED + "Erorr, PvPMode no is configured!");
             return;
         }
+        ItemStack[] contents = ((List<ItemStack>)PvPModeFile.getConfig().get("INVENTORY")).stream().toArray(ItemStack[]::new) ;
+        ItemStack[] armor = ((List<ItemStack>)PvPModeFile.getConfig().get("ARMOR")).stream().toArray(ItemStack[]::new) ;
         if(isOnPvPMode(player)) {
             inPvPMode.remove(player.getUniqueId());
             kills.remove(player.getUniqueId());
