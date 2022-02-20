@@ -58,7 +58,8 @@ public class PvPModeHandler {
             inPvPMode.remove(player.getUniqueId());
             kills.remove(player.getUniqueId());
             FileConfiguration config = HotbarFile.getConfig();
-            player.getInventory().clear();
+            player.getInventory().setContents(null);
+            player.getInventory().setArmorContents(null);
             // Server selector item
             if(config.getBoolean("SERVER-SELECTOR.ENABLED")) {
                 new ServerSelectorItem().set(player, config.getInt("SERVER-SELECTOR.SLOT"));
