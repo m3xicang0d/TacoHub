@@ -60,10 +60,10 @@ public class PvPModeHandler {
             kills.remove(player.getUniqueId());
             FileConfiguration config = HotbarFile.getConfig();
             player.getInventory().clear();
-            player.getInventory().setHelmet(new ItemStack(null, 1));
-            player.getInventory().setChestplate(new ItemStack(null, 1));
-            player.getInventory().setLeggings(new ItemStack(null, 1));
-            player.getInventory().setBoots(new ItemStack(null, 1));
+            player.getInventory().setHelmet(new ItemStack(Material.AIR, 1));
+            player.getInventory().setChestplate(new ItemStack(Material.AIR, 1));
+            player.getInventory().setLeggings(new ItemStack(Material.AIR, 1));
+            player.getInventory().setBoots(new ItemStack(Material.AIR, 1));
             // Server selector item
             if(config.getBoolean("SERVER-SELECTOR.ENABLED")) {
                 new ServerSelectorItem().set(player, config.getInt("SERVER-SELECTOR.SLOT"));
