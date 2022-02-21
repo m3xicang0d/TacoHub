@@ -15,6 +15,7 @@ import me.jesusmx.tacohub.utils.files.features.HotbarFile;
 import me.jesusmx.tacohub.utils.files.normal.ConfigFile;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -58,8 +59,11 @@ public class PvPModeHandler {
             inPvPMode.remove(player.getUniqueId());
             kills.remove(player.getUniqueId());
             FileConfiguration config = HotbarFile.getConfig();
-            player.getInventory().setContents(null);
-            player.getInventory().setArmorContents(null);
+            player.getInventory().clear();
+            player.getInventory().setHelmet(new ItemStack(null, 1));
+            player.getInventory().setChestplate(new ItemStack(null, 1));
+            player.getInventory().setLeggings(new ItemStack(null, 1));
+            player.getInventory().setBoots(new ItemStack(null, 1));
             // Server selector item
             if(config.getBoolean("SERVER-SELECTOR.ENABLED")) {
                 new ServerSelectorItem().set(player, config.getInt("SERVER-SELECTOR.SLOT"));
