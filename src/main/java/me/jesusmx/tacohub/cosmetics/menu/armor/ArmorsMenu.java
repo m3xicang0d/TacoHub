@@ -1,6 +1,7 @@
 package me.jesusmx.tacohub.cosmetics.menu.armor;
 
 import me.jesusmx.tacohub.cosmetics.button.armor.ArmorButton;
+import me.jesusmx.tacohub.cosmetics.button.armor.ArmorRemoveButton;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.menu.Button;
 import me.jesusmx.tacohub.utils.bukkit.menu.Menu;
@@ -36,6 +37,7 @@ public class ArmorsMenu extends Menu {
         for(String s : config.getConfigurationSection("MENU.ARMORS").getKeys(false)) {
             buttons.put(config.getInt("MENU.ARMORS." + s + ".SLOT") - 1, new ArmorButton(s));
         }
+        buttons.put(config.getInt("MENU.REMOVE_ARMOR.SLOT"), new ArmorRemoveButton());
         return buttons;
     }
 }

@@ -4,7 +4,13 @@ MENU:
   REFILL-GLASS:
     ENABLED: true
     DATA: 7
-
+  REMOVE_ARMOR:
+    SLOT: 35
+    NAME: "&cClick to remove hat"
+    ITEM: "BEACON"
+    DATA: 0
+    LORE:
+      - ""
   ARMORS:
     BLUE:
       PERMISSION: "HUB.ARMORS.BLUE"
