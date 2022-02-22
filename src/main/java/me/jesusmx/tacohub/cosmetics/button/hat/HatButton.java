@@ -28,6 +28,10 @@ public class HatButton extends Button {
 
     @Override
     public void click(Player player, int slot, ClickType clickType, int hotbarButton) {
+        if(!player.hasPermission("HAT_" + s)) {
+            player.sendMessage(CC.RED + "You dont have permission to use this, requeired: HAT_" + s);
+            return;
+        }
         String path = "MENU.HATS." + s + ".";
         ItemStack item;
         if(config.getBoolean(path + "SKULL.ENABLED")) {
