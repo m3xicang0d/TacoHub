@@ -122,6 +122,8 @@ public class PvPModeHandler {
             inPvPMode.put(player.getUniqueId(), System.currentTimeMillis());
             kills.put(player.getUniqueId(), 0);
             player.setWalkSpeed(0.2F);
+            player.setAllowFlight(false);
+            player.getInventory().clear();
             player.getInventory().setContents(contents);
             player.getInventory().setArmorContents(armor);
             player.updateInventory();

@@ -42,6 +42,7 @@ public class DoubleJumpListener implements Listener {
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
+        if(PvPModeHandler.isOnPvPMode(player)) return;
         if(player.getGameMode() == GameMode.CREATIVE) return;
         if (player.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() != Material.AIR) {
             player.setAllowFlight(true);

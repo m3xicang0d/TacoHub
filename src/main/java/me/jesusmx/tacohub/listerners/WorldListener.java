@@ -1,6 +1,7 @@
 package me.jesusmx.tacohub.listerners;
 
 import me.jesusmx.tacohub.commands.impl.builder.BuilderMode;
+import me.jesusmx.tacohub.pvpmode.cache.PvPModeHandler;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.files.normal.ConfigFile;
 import io.github.fxmxgragfx.api.listener.PluginListener;
@@ -52,6 +53,10 @@ public class WorldListener implements Listener {
     }
     @EventHandler
     private void onClick(InventoryClickEvent event) {
+        if(PvPModeHandler.isOnPvPMode((Player) event.getWhoClicked())) {
+            event.setCancelled(false);
+            return;
+        }
         if (!event.getWhoClicked().getGameMode().equals(GameMode.CREATIVE)) event.setCancelled(true);
     }
     @EventHandler

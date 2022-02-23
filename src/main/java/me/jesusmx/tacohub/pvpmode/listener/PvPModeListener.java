@@ -4,9 +4,12 @@ import io.github.fxmxgragfx.api.listener.PluginListener;
 import me.jesusmx.tacohub.pvpmode.cache.PvPModeHandler;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 /**
@@ -14,10 +17,10 @@ import org.bukkit.event.player.PlayerQuitEvent;
  * @Project TacoHub
  **/
 
-@PluginListener
+@PluginListener(debug = true)
 public class PvPModeListener implements Listener {
 
-    @EventHandler(ignoreCancelled = true)
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerAttack(EntityDamageByEntityEvent event) {
         if(!(event.getEntity() instanceof Player)) return;
         if(!(event.getDamager() instanceof Player)) return;
@@ -30,8 +33,23 @@ public class PvPModeListener implements Listener {
         event.setCancelled(false);
     }
 
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void onItemConsume(PlayerItemConsumeEvent event) {
+        Player player = event.getPlayer();
+        if(!PvPModeHandler.isOnPvPMode(player)) return;
+        event.setCancelled(false);
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void onFoodChange(FoodLevelChangeEvent event) {
+        if(!(event.getEntity() instanceof Player)) return;
+        Player player = (Player) event.getEntity();
+        if(!PvPModeHandler.isOnPvPMode(player)) return;
+        event.setCancelled(false);
+    }
+
     @SuppressWarnings("ConstantConditions")
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onEntityDeath(PlayerDeathEvent event) {
         if(event.getEntity().getKiller() == null) return;
         if(!(event.getEntity().getKiller() instanceof Player)) return;

@@ -1,6 +1,7 @@
 package me.jesusmx.tacohub.utils.bukkit.menu;
 
 import io.github.fxmxgragfx.api.listener.PluginListener;
+import me.jesusmx.tacohub.pvpmode.cache.PvPModeHandler;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -18,6 +19,10 @@ public class MenuListener implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
+        if(PvPModeHandler.isOnPvPMode(player)) {
+            event.setCancelled(false);
+            return;
+        }
         Menu menu = Menu.getOpenedMenus().get(player);
 
         if (menu == null) {

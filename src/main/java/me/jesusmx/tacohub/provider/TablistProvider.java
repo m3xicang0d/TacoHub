@@ -97,7 +97,7 @@ public class TablistProvider implements TabElementHandler {
                 }
                 SkinType skinType = SkinType.DARK_GRAY;
                 if(str.toLowerCase(Locale.ROOT).contains("<placeholder:")) {
-                    String skin = StringUtils.after(StringUtils.before(str, ">"), "<placeholder=");
+                    String skin = StringUtils.after(StringUtils.before(str, ">"), "<placeholder:");
                     str = StringUtils.after(str, skin + "> ");
                     skinType = SkinType.fromUsername(skin);
                 }
