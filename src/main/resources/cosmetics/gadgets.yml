@@ -1,0 +1,18 @@
+MENU:
+  TITLE: "&dGadgets"
+  REFILL-GLASS:
+    ENABLED: true
+    DATA: 7
+
+  BOW:
+    ENABLED: true
+    SLOT: 11
+    NAME: "&d&lBow Teleport"
+    LORE:
+      - "&7Right click to use"
+  SNOW:
+    ENABLED: true
+    SLOT: 15
+    NAME: "&b&lSnowball Hider"
+    LORE:
+      - "&7Right click to use"

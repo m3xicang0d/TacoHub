@@ -37,6 +37,11 @@ public class ItemBuilder {
         Preconditions.checkNotNull(stack, "ItemStack cannot be null");
         this.stack = stack;
     }
+    
+    public ItemBuilder setAmount(int amount) {
+        this.stack.setAmount(amount);
+        return this;
+    }
 
     public ItemBuilder(Material material, int amount, byte data) {
         Preconditions.checkNotNull(material, "Material cannot be null");

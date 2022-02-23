@@ -16,18 +16,17 @@ COSMETICS:
       - "&7that can be place on you."
       - ""
       - "&6Click to browse hat!"
-  PARTICLES:
+  GADGETS:
     ENABLED: true
-    NAME: "&6&lParticles"
-    ITEM: "DIAMOND_HELMET"
+    NAME: "&e&lGadgets"
+    ITEM: "BOW"
     DATA: 0
     SLOT: 12
     LORE:
       - ""
-      - "&7A lot of different particle"
-      - "&7that can be place on you."
+      - "&7Gadgets"
       - ""
-      - "&6Click to browse particles!"
+      - "&6Click to browse gadgets!"
   ARMOR:
     ENABLED: true
     NAME: "&6Armor Outfits"
