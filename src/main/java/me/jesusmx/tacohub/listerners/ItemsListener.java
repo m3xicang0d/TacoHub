@@ -68,7 +68,7 @@ public class ItemsListener implements Listener {
                     new CosmeticsItem().set(player, config.getInt("COSMETICS.SLOT"));
                 }
 
-                if (config.getBoolean("PVP_MODE")) {
+                if (config.getBoolean("PVP_MODE.ENABLED")) {
                     new PvPModeItem().set(player, config.getInt("PVP_MODE.SLOT"));
                 }
 

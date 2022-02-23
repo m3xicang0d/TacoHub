@@ -71,13 +71,13 @@ public class TacoHub extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        if(!new TacoLicense(this, ConfigFile.getConfig().getString("LICENSE-KEY"),
+        /*if(!new TacoLicense(this, ConfigFile.getConfig().getString("LICENSE-KEY"),
                 "http://150.136.251.119:8080/api/client",
                 "86d35475fe24625ae72b1bb43ac47b4e26262ef0").verify()) {
             Bukkit.getPluginManager().disablePlugin(this);
             Bukkit.getScheduler().cancelTasks(this);
             return;
-        }
+        }*/
         if (!this.getDescription().getName().equals("TacoHub") || !this.getDescription().getAuthors().contains("Rui")) {
             Bukkit.getPluginManager().disablePlugin(this);
             Bukkit.getConsoleSender().sendMessage(CC.translate("&cNO CHANGE AUTHOR IN PLUGIN.YML :)!"));

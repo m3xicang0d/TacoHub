@@ -59,6 +59,7 @@ public class PvPModeHandler {
             inPvPMode.remove(player.getUniqueId());
             kills.remove(player.getUniqueId());
             FileConfiguration config = HotbarFile.getConfig();
+            player.getActivePotionEffects().clear();
             player.getInventory().clear();
             player.getInventory().setHelmet(new ItemStack(Material.AIR, 1));
             player.getInventory().setChestplate(new ItemStack(Material.AIR, 1));
@@ -93,7 +94,7 @@ public class PvPModeHandler {
                 new CosmeticsItem().set(player, config.getInt("COSMETICS.SLOT"));
             }
 
-            if (config.getBoolean("PVP_MODE")) {
+            if (config.getBoolean("PVP_MODE.ENABLED")) {
                 new PvPModeItem().set(player, config.getInt("PVP_MODE.SLOT"));
             }
             if (ConfigFile.getConfig().getBoolean("JOIN-SPEED.ENABLE")) {
