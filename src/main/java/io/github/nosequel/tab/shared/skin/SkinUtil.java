@@ -14,39 +14,22 @@ public class SkinUtil {
 
     private static Map<UUID, String[]> cache = new HashMap<>();
 
-    /**
-     * Get the skin data by a player's unique identifier
-     *
-     * @param uuid the unique identifier to get the skin data by
-     * @return the skin data
-     */
-    public static String[] getSkinData(UUID uuid) throws IOException {
-        if (cache.containsKey(uuid)) {
-            return cache.get(uuid);
-        }
-
-        URL url = new URL("https://sessionserver.mojang.com/session/minecraft/profile/" + uuid.toString().replace("-", "") + "?unsigned=false");
-        JsonObject json = new JsonParser().parse(new InputStreamReader(url.openStream())).getAsJsonObject().get("properties").getAsJsonArray().get(0).getAsJsonObject();
-
-        return cache.put(uuid, new String[]{
-                json.get("value").getAsString(),
-                json.get("signature").getAsString()
-        });
-    }
-
-    /**
-     * Get the skin data by a player's unique identifier
-     *
-     * @param uuid the unique identifier to get the skin data by
-     * @return the skin data
-     */
-    public static String[] getSkinDataThrown(UUID uuid) {
+    public static String[] getSkinData(UUID uuid) {
+        if(uuid == null) return SkinType.DARK_GRAY.getSkinData();
         try {
-            return getSkinData(uuid);
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
+            if (cache.containsKey(uuid)) {
+                return cache.get(uuid);
+            }
 
-        return null;
+            URL url = new URL("https://sessionserver.mojang.com/session/minecraft/profile/" + uuid.toString().replace("-", "") + "?unsigned=false");
+            JsonObject json = new JsonParser().parse(new InputStreamReader(url.openStream())).getAsJsonObject().get("properties").getAsJsonArray().get(0).getAsJsonObject();
+
+            return cache.put(uuid, new String[]{
+                    json.get("value").getAsString(),
+                    json.get("signature").getAsString()
+            });
+        } catch (IOException e) {
+            return null;
+        }
     }
 }

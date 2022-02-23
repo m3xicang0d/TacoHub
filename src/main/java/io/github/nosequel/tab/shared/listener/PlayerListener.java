@@ -11,7 +11,7 @@ public class PlayerListener implements Listener {
 
     private TabHandler handler;
 
-    @EventHandler
+    @EventHandler 
     public void onJoin(PlayerJoinEvent event) {
         this.handler.sendUpdate(event.getPlayer());
     }

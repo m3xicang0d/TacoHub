@@ -2,6 +2,7 @@ package me.jesusmx.tacohub.provider;
 
 import io.github.nosequel.tab.shared.entry.TabElement;
 import io.github.nosequel.tab.shared.entry.TabElementHandler;
+import io.github.nosequel.tab.shared.skin.SkinType;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.jesusmx.tacohub.TacoHub;
 import me.jesusmx.tacohub.hooker.Hooker;
@@ -12,6 +13,7 @@ import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.files.features.HookerFile;
 import me.jesusmx.tacohub.utils.files.features.TablistFile;
 import me.jesusmx.tacohub.utils.files.normal.ConfigFile;
+import me.jesusmx.tacohub.utils.string.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -23,6 +25,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Developed by JesusMX
@@ -92,7 +95,13 @@ public class TablistProvider implements TabElementHandler {
                         str = str.replace("%" + sk + "_DEATHBAN%", "Loading");
                     }
                 }
-                element.add(i, l, str);
+                SkinType skinType = SkinType.DARK_GRAY;
+                if(str.toLowerCase(Locale.ROOT).contains("<placeholder:")) {
+                    String skin = StringUtils.after(StringUtils.before(str, ">"), "<placeholder=");
+                    str = StringUtils.after(str, skin + "> ");
+                    skinType = SkinType.fromUsername(skin);
+                }
+                element.add(i, l, str, 0, skinType.getSkinData());
             }
         }
         return element;
