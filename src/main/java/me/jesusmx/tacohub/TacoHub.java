@@ -78,11 +78,6 @@ public class TacoHub extends JavaPlugin {
             Bukkit.getScheduler().cancelTasks(this);
             return;
         }
-        if (!this.getDescription().getName().equals("TacoHub") || !this.getDescription().getAuthors().contains("Rui")) {
-            Bukkit.getPluginManager().disablePlugin(this);
-            Bukkit.getConsoleSender().sendMessage(CC.translate("&cNO CHANGE AUTHOR IN PLUGIN.YML :)!"));
-            return;
-        }
         this.bungee();
         this.files();
         new PvPModeHandler();
@@ -124,30 +119,20 @@ public class TacoHub extends JavaPlugin {
 
     private void commands() {
         new PluginCommand("tacohub", TacoHubCommand.class, "taco", "hub", "hubcore");
-        //    Media Commands //
         new PluginCommand("discord", DiscordCommand.class, "dc");
         new PluginCommand("help", HelpCommand.class);
         new PluginCommand("store", StoreCommand.class);
         new PluginCommand("teamspeak", TeamspeakCommand.class, "ts", "ts3");
         new PluginCommand("twitter", TwitterCommand.class);
         new PluginCommand("website", WebsiteCommand.class, "web");
-        //    Staff Commands //
         new PluginCommand("builder", BuilderCommand.class, "build", "buildermode");
         new PluginCommand("setspawn", SetSpawnCommand.class);
         new PluginCommand("skull", SkullCommand.class);
-        //    Queue Commands //
         new PluginCommand("leavequeue", LeaveQueueCommand.class);
         new PluginCommand("togglequeue", ToggleQueueCommand.class,"pausequeue");
         new PluginCommand("joinqueue", JoinQueueCommand.class, "play");
-
-        // Cosmetics Commands //
         new PluginCommand("cosmetics", CosmeticsCommand.class);
-
-        // PvPMode //
         new PluginCommand("pvpmode", PvPModeCommand.class, "pvp");
-
-        // CustomTimer Commands //
-        //new PluginCommand("customtimer", CustomTimerCommand.class, "timers", "customtimers", "timer");
     }
 
     private void managers() {

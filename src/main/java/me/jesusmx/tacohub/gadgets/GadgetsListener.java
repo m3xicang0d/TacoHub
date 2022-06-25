@@ -1,4 +1,4 @@
-package me.jesusmx.tacohub.gadgets.listener;
+package me.jesusmx.tacohub.gadgets;
 
 import io.github.m3xicang0d.api.listener.PluginListener;
 import me.jesusmx.tacohub.utils.CC;
