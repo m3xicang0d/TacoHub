@@ -19,7 +19,7 @@
 
 
 # Gratitude
-* I thank all the buyers that I had in TacoHub that were around (25), and I also thank my friend ** for helping me at the beginning and giving me some advice..
+* I thank all the buyers that I had in TacoHub that were around (25), and I also thank my friend FxMxGRAGFX for helping me at the beginning and giving me some advice..
 
 * It should be noted that he stopped helping me from version 1.0, the other versions were made by me... so if you see that my code is wrong, I ask you to consider that I don't need Skidd to do things.
 
