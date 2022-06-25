@@ -1,11 +1,10 @@
 package me.jesusmx.tacohub.gadgets.listener;
 
-import io.github.fxmxgragfx.api.listener.PluginListener;
+import io.github.m3xicang0d.api.listener.PluginListener;
 import me.jesusmx.tacohub.utils.CC;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Arrow;
-import org.bukkit.entity.EnderPearl;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Snowball;
 import org.bukkit.event.EventHandler;
@@ -14,12 +13,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
-import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.util.Vector;
 
 /**
- * @Author UKry
+ * @Author JesusMX
  * @Project TacoHub
  **/
 

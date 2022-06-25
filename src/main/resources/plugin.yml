@@ -2,7 +2,8 @@ name: TacoHub
 version: 1.5.7
 main: me.jesusmx.tacohub.TacoHub
 authors:
-  - Rui
+  - JesusMX
+  - FxMxGRAGFX
 softdepend:
   - Vault
   - ProtocolLib

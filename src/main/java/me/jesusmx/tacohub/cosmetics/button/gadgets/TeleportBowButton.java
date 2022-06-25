@@ -10,7 +10,7 @@ import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
 /**
- * @Author UKry
+ * @Author JesusMX
  * @Project TacoHub
  **/
 

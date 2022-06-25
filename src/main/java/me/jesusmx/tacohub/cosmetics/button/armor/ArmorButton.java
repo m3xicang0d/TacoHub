@@ -1,6 +1,6 @@
 package me.jesusmx.tacohub.cosmetics.button.armor;
 
-import io.github.fxmxgragfx.api.item.ArmorBuilder;
+import io.github.m3xicang0d.api.item.ArmorBuilder;
 import lombok.Getter;
 import me.jesusmx.tacohub.utils.CC;
 import me.jesusmx.tacohub.utils.bukkit.ItemBuilder;
@@ -15,7 +15,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 /**
- * @Author UKry
+ * @Author JesusMX
  * @Project TacoHub
  **/
 

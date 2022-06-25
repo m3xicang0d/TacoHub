@@ -1,6 +1,6 @@
 package me.jesusmx.tacohub.pvpmode.listener;
 
-import io.github.fxmxgragfx.api.listener.PluginListener;
+import io.github.m3xicang0d.api.listener.PluginListener;
 import me.jesusmx.tacohub.pvpmode.cache.PvPModeHandler;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 /**
- * @Author UKry
+ * @Author JesusMX
  * @Project TacoHub
  **/
 

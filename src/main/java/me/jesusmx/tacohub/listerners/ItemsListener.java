@@ -1,7 +1,7 @@
 package me.jesusmx.tacohub.listerners;
 
 import me.jesusmx.tacohub.TacoHub;
-import me.jesusmx.tacohub.commands.impl.Permissions;
+import me.jesusmx.tacohub.commands.Permissions;
 import me.jesusmx.tacohub.cosmetics.item.CosmeticsItem;
 import me.jesusmx.tacohub.listerners.enderbutt.item.EnderButtItem;
 import me.jesusmx.tacohub.parkour.item.ParkourItem;
@@ -13,7 +13,7 @@ import me.jesusmx.tacohub.listerners.toggleview.item.ShowedItem;
 import me.jesusmx.tacohub.utils.bungee.BungeeUtils;
 import me.jesusmx.tacohub.utils.files.features.HotbarFile;
 import me.jesusmx.tacohub.utils.files.normal.ConfigFile;
-import io.github.fxmxgragfx.api.listener.PluginListener;
+import io.github.m3xicang0d.api.listener.PluginListener;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
